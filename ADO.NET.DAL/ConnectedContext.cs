@@ -214,8 +214,8 @@ public class ConnectedContext(DbConnection connection)
         try
         {
             command.ExecuteNonQuery();
-
-            var outputOldPrice = (decimal)command.Parameters["p_old_price"].Value;
+            // var outputOldPrice = (decimal)command.Parameters["p_old_price"].Value;
+            var outputOldPrice = (decimal)command.Parameters["@p_old_price"].Value;
             return outputOldPrice;
         }
         catch (Exception ex)

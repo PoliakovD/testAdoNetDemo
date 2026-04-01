@@ -1,9 +1,16 @@
 <Solution>
+  <Folder Name="/docker/">
+    <File Path="compose.yaml" />
+  </Folder>
+  <Folder Name="/MySQL/">
+    <File Path="create_db_MySQL.sql" />
+    <File Path="create_procedure_MySQL.sql" />
+    <File Path="fill_db.sql" />
+  </Folder>
   <Folder Name="/other/">
     <File Path=".gitignore" />
   </Folder>
   <Folder Name="/PostgresSQL/">
-    <File Path="compose.yaml" />
     <File Path="create_db.sql" />
     <File Path="create_procedure.sql" />
     <File Path="fill_db.sql" />

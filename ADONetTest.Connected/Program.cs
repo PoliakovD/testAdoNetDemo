@@ -10,8 +10,9 @@ class Program
     {
         try
         {
-            var connection = DbConnectionFactory.GetPostgreSqlConnection();
+            //var connection = DbConnectionFactory.GetPostgreSqlConnection();
             //var connection = DbConnectionFactory.GetSqLiteConnection();
+            var connection =DbConnectionFactory.GetMySqlConnection();
             var context = new ConnectedContext(connection);
 
             var productList = context.GetAllProducts();

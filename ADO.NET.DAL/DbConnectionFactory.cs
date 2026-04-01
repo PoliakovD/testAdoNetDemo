@@ -1,5 +1,6 @@
 ﻿using System.Data.Common;
 using Microsoft.Data.Sqlite;
+using MySql.Data.MySqlClient;
 using Npgsql;
 
 namespace ADO.NET.DAL;
@@ -88,5 +89,14 @@ public static class DbConnectionFactory
         }
 
         return null;
+    }
+
+    public static DbConnection GetMySqlConnection()
+    {
+        var connectionString =
+            "server=localhost;Port=3306;user id=mysql;Password=1234;database=bbq_db;";
+
+        return new MySqlConnection(connectionString);
+
     }
 }
