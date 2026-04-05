@@ -10,6 +10,13 @@ class Program
     {
         try
         {
+            //docker compose -f compose.yaml -p bbqdatabase up -d
+            
+            
+            //Флаг -p (сокращение от --project-name) в команде docker compose используется для задания имени проекта.
+        
+            //-- Флаг -d запускает контейнеры в фоновом режиме, освобождая терминал;
+            
             //var connection = DbConnectionFactory.GetPostgreSqlConnection();
             //var connection = DbConnectionFactory.GetSqLiteConnection();
             var connection =DbConnectionFactory.GetMySqlConnection();
