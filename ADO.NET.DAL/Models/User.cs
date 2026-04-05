@@ -10,6 +10,7 @@ public record User
    
    // hashcode 
    
+   //фывфыв
    // operator ==  !=
     
     
