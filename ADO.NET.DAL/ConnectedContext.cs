@@ -125,6 +125,8 @@ public class ConnectedContext(DbConnection connection)
 
 
         command.ExecuteNonQuery();
+        
+        
         Console.WriteLine($"Пользователь {user.Name}, {user.IsDriver} добавлен");
         _connection.Close();
     }
@@ -213,6 +215,7 @@ public class ConnectedContext(DbConnection connection)
         using var command = _connection.CreateCommand();
         command.CommandText = "update_product_price";
         command.CommandType = CommandType.StoredProcedure;
+        
 
         // command.AddParameterWithValue("p_id", id);
         // command.AddParameterWithValue("p_new_price", newPrice);

@@ -43,28 +43,73 @@ class Program
         // }
         //
 
-        var newUser1 = new User()
-        {
-            Name = "Dapper User 1",
-            IsDriver = false
-        };
-        var newUser2 = new User()
-        {
-            Name = "Dapper User 2",
-            IsDriver = false
-        };
-        var newUser3 = new User()
-        {
-            Name = "Dapper User 3",
-            IsDriver = false
-        };
-
-        List<User> listUser = [newUser1,newUser2,newUser3];
-
+        // var newUser1 = new User()
+        // {
+        //     Name = "Dapper User 1",
+        //     IsDriver = false
+        // };
+        // var newUser2 = new User()
+        // {
+        //     Name = "Dapper User 2",
+        //     IsDriver = false
+        // };
+        // var newUser3 = new User()
+        // {
+        //     Name = "Dapper User 3",
+        //     IsDriver = false
+        // };
+        //
+        // List<User> listUser = [newUser1,newUser2,newUser3];
+        //
+        //
+        // var rows = dapperContext.InsertUsers(listUser);
+        //
+        // Console.WriteLine("Inserted Successfully" + rows);
+        //
+        //dapperContext.CopyWithAddingProduct("Шейка свиная", "Спинка свинная");
         
-        var rows = dapperContext.InsertUsers(listUser);
+        //dapperContext.BuyProduct( "Спинка свинная",2500m);
 
-        Console.WriteLine("Inserted Successfully" + rows);
+        // var prod1 = new Product()
+        // {
+        //     Name = "Product Transaction 1",
+        //     Price = 2500m,
+        //     Quantity = "12",
+        //     IsPurchased = false
+        // };
+        // var prod2 = new Product()
+        // {
+        //     Name = "Product Transaction 2",
+        //     Price = 2500m,
+        //     Quantity = "12",
+        //     IsPurchased = false
+        // };
+        // var prod3 = new Product()
+        // {
+        //     Name = "Product Transaction 3",
+        //     Price = -2500m,
+        //     Quantity = "12",
+        //     IsPurchased = false
+        // };
+        
+        // List<Product> products = [prod1,prod2,prod3];
+        //
+        // dapperContext.AddProductsTransaction(products);
+        //
+        // var prods = dapperContext.GetAllProducts();
+        //
+        // foreach (var product in prods) Console.WriteLine(product);
+
+        // dapperContext.MultipleDemo(3);
+        //
+        // int[] ids = [1, 4, 5, 6, 8];
+        // var users = dapperContext.GetUsersByIds(ids);
+        //
+        // foreach (var user in users) Console.WriteLine(user);
+
+
+        var products = dapperContext.GetProducts();
+        foreach (var product in products) Console.WriteLine(product);
 
     }
 }

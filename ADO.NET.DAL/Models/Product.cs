@@ -8,5 +8,6 @@ public record Product
     public decimal Price { get; set; }
     public bool IsPurchased { get; set; }
     public string UserName { get; set; }
+    public User? User { get; set; }
     // тествовый комит 
 }

@@ -41,31 +41,31 @@ class Program
             //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
             
             
-            //var users = context.GetAllUsers();
-
-            // Console.WriteLine("До SQL Инъекции");
-            // foreach (var user in users)
-            //     {
-            //         Console.WriteLine($"{user.Id}-{user.Name} - [{(user.IsDriver?"Водитель":"Пешеход")}]");
-            //     }
+            // var users = context.GetAllUsers();
             //
-            //  var newUser = new User()
-            // {
-            //     Name = "1',false); DROP TABLE table_users; --",
-            //     IsDriver = true,
-            // };
+            //  Console.WriteLine("До SQL Инъекции");
+            //  foreach (var user in users)
+            //      {
+            //          Console.WriteLine($"{user.Id}-{user.Name} - [{(user.IsDriver?"Водитель":"Пешеход")}]");
+            //      }
             //
-            // context.InsertNewUser(newUser);
+            //   var newUser = new User()
+            //  {
+            //      Name = "1',false); DROP TABLE table_users; --",
+            //      IsDriver = true,
+            //  };
             //
-            // Console.WriteLine("После SQL Инъекции");
+            //  context.InsertNewUser(newUser);
             //
-            // users = context.GetAllUsers();
+            //  Console.WriteLine("После SQL Инъекции");
             //
-            // Console.WriteLine("До SQL Инъекции");
-            // foreach (var user in users)
-            // {
-            //     Console.WriteLine($"{user.Id}-{user.Name} - [{(user.IsDriver?"Водитель":"Пешеход")}]");
-            // }
+            //  users = context.GetAllUsers();
+            //
+            //  Console.WriteLine("До SQL Инъекции");
+            //  foreach (var user in users)
+            //  {
+            //      Console.WriteLine($"{user.Id}-{user.Name} - [{(user.IsDriver?"Водитель":"Пешеход")}]");
+            //  }
             //
             
             
@@ -87,14 +87,14 @@ class Program
             //     }
             //
             //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-            // var avg = context.GetAvgPrice();
-            // Console.WriteLine("Avg Price: " + avg);
-            //
-            // Console.WriteLine("Старая цена для шеи:"+ context.UpdatePrice(1, 3500m));
-            //
-            //  avg = context.GetAvgPrice();
-            // Console.WriteLine("Avg Price: " + avg);
-            //
+            var avg = context.GetAvgPrice();
+            Console.WriteLine("Avg Price: " + avg);
+            
+            Console.WriteLine("Старая цена для шеи:"+ context.UpdatePrice(1, 3500m));
+            
+             avg = context.GetAvgPrice();
+            Console.WriteLine("Avg Price: " + avg);
+            
 
             context.TransactionsDemoRawSql();
             //context.TransactionDemo();
