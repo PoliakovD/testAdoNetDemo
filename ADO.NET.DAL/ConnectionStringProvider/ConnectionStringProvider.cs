@@ -6,6 +6,7 @@ namespace ADO.NET.DAL.ConnectionStringProvider;
 public static class ConnectionStringProvider
 {
     // Nuget Packages
+    
     // Microsoft.Extensions.Configuration
     
     // Microsoft.Extensions.Configuration.Xml
