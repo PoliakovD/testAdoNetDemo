@@ -1,5 +1,7 @@
 ﻿using ADO.NET.DAL;
 using ADO.NET.DAL.Models;
+using Microsoft.Extensions.Logging;
+using Npgsql;
 
 namespace DapperTest;
 
@@ -108,8 +110,17 @@ class Program
         // foreach (var user in users) Console.WriteLine(user);
 
 
-        var products = dapperContext.GetProducts();
-        foreach (var product in products) Console.WriteLine(product);
+        // var products = dapperContext.GetProducts();
+        // foreach (var product in products) Console.WriteLine(product);
+
+        /// // 1. Создаем фабрику логов, которая пишет в консоль
+        var loggerFactory = LoggerFactory.Create(builder => builder.AddConsole().SetMinimumLevel(LogLevel.Debug));
+
+        // 2. Указываем Npgsql использовать эту фабрику (делать один раз при старте)
+        NpgsqlLoggingConfiguration.InitializeLogging(loggerFactory);
+        
+        var users = dapperContext.GetAllUsers();
+        foreach (var user in users) Console.WriteLine(user);
 
     }
 }

@@ -1,6 +1,8 @@
 ﻿using System.Data.Common;
 using ADO.NET.DAL.Models;
 using Dapper;
+using Microsoft.Extensions.Logging;
+using Npgsql;
 
 namespace ADO.NET.DAL;
 
@@ -44,6 +46,15 @@ public class DapperContextMy(DbConnection connection)
     //     _connection.Close();
     //     return result;
     // }
+    
+    public void AddLogging()
+    {
+        /// // 1. Создаем фабрику логов, которая пишет в консоль
+        var loggerFactory = LoggerFactory.Create(builder => builder.AddConsole().SetMinimumLevel(LogLevel.Debug));
+
+        // 2. Указываем Npgsql использовать эту фабрику (делать один раз при старте)
+        NpgsqlLoggingConfiguration.InitializeLogging(loggerFactory);
+    }
 
     public IEnumerable<User> GetAllUsers()
     {

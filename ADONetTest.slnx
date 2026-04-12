@@ -21,4 +21,5 @@
   <Project Path="ADONetTest.Connected/ADONetTest.Connected.csproj" />
   <Project Path="ConnectionStringTest/ConnectionStringTest.csproj" />
   <Project Path="DapperTest/DapperTest.csproj" />
+  <Project Path="DisconnectedConsoleTest/DisconnectedConsoleTest.csproj" />
 </Solution>
