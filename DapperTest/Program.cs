@@ -11,6 +11,8 @@ class Program
         
         var dapperContext = new DapperContextMy(connection);
         
+        // тест
+        //
         // var allUsers = dapperContext.GetAllUsers();
         // foreach (var user in allUsers)
         // {
