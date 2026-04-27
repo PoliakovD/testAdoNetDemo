@@ -49,6 +49,7 @@ public class DapperContextMy(DbConnection connection)
     
     public void AddLogging()
     {
+        //ss
         /// // 1. Создаем фабрику логов, которая пишет в консоль
         var loggerFactory = LoggerFactory.Create(builder => builder.AddConsole().SetMinimumLevel(LogLevel.Debug));
 
